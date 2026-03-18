@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FlipcardApp</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-   <div class="text-align:center">
-    <div class="card" id="myCard">
-      <div id="cardText">What does Html stand for?</div>
+
+  <div class="wrapper">
+
+    <div class="scene" onclick="flipCard()">
+      <div class="card" id="myCard">
+
+        <div class="card-front">
+          <div class="card-tag">Question — click to reveal</div>
+          <div id="questionText">What does HTML stand for?</div>
+        </div>
+
+        <div class="card-back">
+          <div class="card-tag">Answer</div>
+          <div id="answerText">HyperText Markup Language</div>
+        </div>
+
+      </div>
     </div>
 
     <div class="buttons">
-      <button class="hard">Hard</button>
-      <button class="got-it">Got it!</button>
+      <button class="hard"   onclick="markHard()">Hard</button>
+      <button class="got-it" onclick="markGotIt()">Got it!</button>
     </div>
 
-    <div id="score">Got it : 0 | Hard: 0</div>
-   </div>
+    <div id="score">Got it: 0 | Hard: 0</div>
+    <div id="progress">Card 1 of 5</div>
 
+  </div>
+
+  <script src="flip.js"></script>
 
 </body>
 </html>
